@@ -1,0 +1,3 @@
+{
+  "extends": ["react-app", "next/core-web-vitals"]
+}
