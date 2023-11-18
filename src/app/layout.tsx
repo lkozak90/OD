@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import { Navigation, Footer } from "@/components";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 
 export default function RootLayout({
   children,

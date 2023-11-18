@@ -1,7 +1,8 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import { SliderNavigation, Slide } from "./components";
+import { CircleButton } from "../CicrcleButton";
 
 export const FullViewSlider = () => {
   return (
@@ -17,6 +18,7 @@ export const FullViewSlider = () => {
             img={{ src: "/images/img1.jpg", alt: "img1 alt" }}
             title="Osada Domków"
             text="Kościelisko"
+            primary
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -35,19 +37,17 @@ export const FullViewSlider = () => {
         </SwiperSlide>
         <SliderNavigation />
       </Swiper>
-      <Button
-        variant="contained"
-        size="large"
+      <Box
         sx={{
           position: "absolute",
           zIndex: 1,
-          bottom: 16,
+          bottom: 32,
           left: "50%",
           transform: "translateX(-50%)",
         }}
       >
-        Zarezerwuj
-      </Button>
+        <CircleButton text="Check Availability" />
+      </Box>
     </Box>
   );
 };

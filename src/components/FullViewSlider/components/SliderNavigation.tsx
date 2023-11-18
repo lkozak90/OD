@@ -15,13 +15,19 @@ export const SliderNavigation = () => {
 
   return (
     <>
-      <StyledIconButton onClick={() => swiper.slidePrev()} sx={{ left: 10 }}>
+      <StyledIconButton
+        onClick={() => swiper.slidePrev()}
+        sx={{ left: "0.5vw" }}
+      >
         <ArrowBackIosNew
           fontSize="large"
           sx={{ left: -2, position: "relative" }}
         />
       </StyledIconButton>
-      <StyledIconButton onClick={() => swiper.slideNext()} sx={{ right: 10 }}>
+      <StyledIconButton
+        onClick={() => swiper.slideNext()}
+        sx={{ right: "0.5vw" }}
+      >
         <ArrowForwardIos
           fontSize="large"
           sx={{ right: -2, position: "relative" }}

@@ -30,7 +30,6 @@ const Footer = () => {
             </Grid>
             <Grid item xs={12} md={4}>
               <Stack spacing={2}>
-                <Typography variant="h5">Skontaktuj się z nami</Typography>
                 <Typography variant="body2">
                   <MuiLink
                     component={Link}

@@ -7,9 +7,10 @@ interface SlideProps {
   img: { src: string; alt: string };
   title: string;
   text: string;
+  primary?: boolean;
 }
 
-export const Slide = ({ img, title, text }: SlideProps) => {
+export const Slide = ({ img, title, text, primary }: SlideProps) => {
   return (
     <Stack
       justifyContent="center"
@@ -18,6 +19,7 @@ export const Slide = ({ img, title, text }: SlideProps) => {
     >
       <Image
         fill
+        priority={primary}
         style={{
           objectFit: "cover",
           objectPosition: "bottom",
@@ -25,9 +27,14 @@ export const Slide = ({ img, title, text }: SlideProps) => {
         src={img.src}
         alt={img.alt}
       />
-      <Stack zIndex={1} alignItems="center">
-        <Typography variant="h2">{title}</Typography>
-        <Typography variant="h5" component="p">
+      <Stack zIndex={1} alignItems="center" sx={{ p: 4, textAlign: "center" }}>
+        <Typography
+          variant="h1"
+          {...(primary ? { component: "h1" } : { component: "h2" })}
+        >
+          {title}
+        </Typography>
+        <Typography variant="h2" component="p">
           {text}
         </Typography>
       </Stack>
