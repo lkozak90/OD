@@ -1,8 +1,9 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box } from "@mui/material";
-import { SliderNavigation, Slide } from "./components";
-import { CircleButton } from "../CicrcleButton";
+import { Slide } from "./components";
+import { SliderNavigation } from "../components";
+import { CircleButton } from "../../CicrcleButton";
 
 export const FullViewSlider = () => {
   return (
