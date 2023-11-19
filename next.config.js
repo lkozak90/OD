@@ -7,6 +7,14 @@ const nextConfig = {
       transform: "@mui/icons-material/{{member}}",
     },
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

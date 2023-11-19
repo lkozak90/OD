@@ -134,19 +134,19 @@ export default function HomePage() {
         </Container>
         <Container maxWidth={false} sx={{ mb: 15, maxWidth: 2560 }}>
           <Grid container spacing={3} justifyContent="center">
-            <Grid item xs={12} md={6} lg={4} xl>
+            <Grid item>
               <OfferCard />
             </Grid>
-            <Grid item xs={12} md={6} lg={4} xl>
+            <Grid item>
               <OfferCard />
             </Grid>
-            <Grid item xs={12} md={6} lg={4} xl>
+            <Grid item>
               <OfferCard />
             </Grid>
-            <Grid item xs={12} md={6} lg={4} xl>
+            <Grid item>
               <OfferCard />
             </Grid>
-            <Grid item xs={12} md={6} lg={4} xl>
+            <Grid item>
               <OfferCard />
             </Grid>
           </Grid>

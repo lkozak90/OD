@@ -25,7 +25,11 @@ import { Socials } from "../Socials";
 import { Menu } from "@mui/icons-material";
 
 const drawerWidth = 240;
-const navItems = ["Offer", "About", "Contact"];
+const navItems = [
+  { label: "Offer", href: "/offer" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
 
 const StyledAppBar = styled(AppBar, {
   shouldForwardProp: (prop) => prop !== "isScrolled",
@@ -76,9 +80,13 @@ const Navigation = () => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+          <ListItem key={item.label} disablePadding>
+            <ListItemButton
+              sx={{ textAlign: "center" }}
+              LinkComponent={Link}
+              href={item.href}
+            >
+              <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -122,8 +130,13 @@ const Navigation = () => {
               sx={{ display: { xs: "none", sm: "block" } }}
             >
               {navItems.map((item) => (
-                <Button key={item} sx={{ px: 3 }}>
-                  {item}
+                <Button
+                  key={item.label}
+                  sx={{ px: 3 }}
+                  LinkComponent={Link}
+                  href={item.href}
+                >
+                  {item.label}
                 </Button>
               ))}
             </ButtonGroup>

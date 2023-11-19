@@ -47,7 +47,14 @@ const OfferCard = () => {
   }, []);
 
   return (
-    <Card sx={{ borderRadius: 0, height: "80vh", position: "relative" }}>
+    <Card
+      sx={{
+        borderRadius: 0,
+        height: "80vh",
+        position: "relative",
+        maxWidth: 500,
+      }}
+    >
       <StyledCardActionArea component="div">
         <Image
           fill
