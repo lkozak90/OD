@@ -12,6 +12,8 @@ import {
 import Image from "next/image";
 import { AttachMoney, SquareFoot, Shower } from "@mui/icons-material";
 import { useCallback } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const StyledCardActionArea = styled(CardActionArea)(({ theme }) => ({
   height: "100%",
@@ -42,8 +44,12 @@ const features = [
 ];
 
 const OfferCard = () => {
-  const handleMouseDown = useCallback((e: React.MouseEvent<HTMLElement>) => {
+  const router = useRouter();
+  const handleButtonClick = useCallback((e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation();
+  }, []);
+  const handleActionAreaClick = useCallback(() => {
+    router.push("/offer/dom-1");
   }, []);
 
   return (
@@ -53,9 +59,10 @@ const OfferCard = () => {
         height: "80vh",
         position: "relative",
         maxWidth: 500,
+        maxHeight: 800,
       }}
     >
-      <StyledCardActionArea component="div">
+      <StyledCardActionArea component="div" onClick={handleActionAreaClick}>
         <Image
           fill
           style={{
@@ -92,7 +99,10 @@ const OfferCard = () => {
                 color="secondary"
                 size="large"
                 fullWidth
-                onMouseDown={handleMouseDown}
+                onMouseDown={handleButtonClick}
+                onClick={handleButtonClick}
+                LinkComponent={Link}
+                href="/offer/dom-1"
               >
                 Zobacz
               </Button>
@@ -102,7 +112,8 @@ const OfferCard = () => {
                 variant="contained"
                 size="large"
                 fullWidth
-                onMouseDown={handleMouseDown}
+                onMouseDown={handleButtonClick}
+                onClick={handleButtonClick}
               >
                 Zarezerwuj
               </Button>

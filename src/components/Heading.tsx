@@ -63,13 +63,19 @@ interface HeadingProps {
   title: string;
   titleProps?: TypographyProps;
   button?: CircleButtonProps;
+  fullWidthTitle?: boolean;
 }
 
-const Heading = ({ title, titleProps, button }: HeadingProps) => {
+const Heading = ({
+  title,
+  titleProps,
+  button,
+  fullWidthTitle,
+}: HeadingProps) => {
   return (
     <Grid container spacing={3} mb={4}>
-      <Grid item xs={10} lg={6}>
-        <SlideIn variant="up">
+      <Grid item xs={fullWidthTitle ? 12 : 10} lg={fullWidthTitle ? 12 : 6}>
+        <SlideIn variant="down">
           <Typography variant="h2" {...titleProps}>
             {title}
           </Typography>

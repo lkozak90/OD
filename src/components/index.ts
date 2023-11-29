@@ -13,3 +13,8 @@ export * from "./Heading";
 export * from "./SlideIn";
 export * from "./Banner";
 export * from "./Gallery";
+export * from "./OfferBanner";
+export * from "./ReservationSection";
+export * from "./OffersNav";
+export * from "./Tabs";
+export * from "./Accordions";

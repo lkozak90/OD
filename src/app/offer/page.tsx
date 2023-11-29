@@ -9,13 +9,7 @@ import {
   OfferCard,
   Gallery,
 } from "@/components";
-import { Container, Box, Grid, Button, Paper, Typography } from "@mui/material";
-import {
-  SelfImprovement,
-  Pets,
-  Accessible,
-  Landscape,
-} from "@mui/icons-material";
+import { Container, Box, Grid, Paper, Typography } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Osada Domków | Oferta",
