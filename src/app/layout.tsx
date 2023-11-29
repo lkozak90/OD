@@ -5,6 +5,7 @@ import { Navigation, Footer } from "@/components";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import "swiper/css/free-mode";
 
 export default function RootLayout({
   children,

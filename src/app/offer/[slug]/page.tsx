@@ -1,42 +1,31 @@
 import type { Metadata } from "next";
 import {
-  Intro,
   ContactSection,
   Heading,
   SlideIn,
-  Banner,
-  OfferSlider,
+  OfferBanner,
   OfferCard,
   Gallery,
+  ReservationSection,
+  OffersNav,
 } from "@/components";
 import { Container, Box, Grid, Paper, Typography } from "@mui/material";
 
 export const metadata: Metadata = {
-  title: "Osada Domków | Oferta",
-  description: "Osada Domków w Kościelisku - Oferta",
+  title: "Osada Domków | Dom 1",
+  description: "Osada Domków w Kościelisku - Oferta domku 1",
 };
 
 export default function OfferPage() {
   return (
     <Box>
-      <Banner
-        title="Offer"
+      <OfferBanner
         img={{ src: "/images/img3.jpg", alt: "img3 alt" }}
+        title="Dom 1"
+        text="She packed her seven versalia, put her initial into the belt and
+        made herself on the way."
       />
-      <Container maxWidth="xl" sx={{ my: 20, overflow: "hidden" }}>
-        <Intro
-          variant="h1"
-          title="She packed her seven versalia"
-          text="She packed her seven versalia, put her initial into the belt and
-              made herself on the way. When she reached the first hills of the
-              Italic Mountains, she had a last view back on the skyline of her
-              hometown Bookmarksgrove, the headline of Alphabet Village and the
-              subline of her own road, the Line Lane."
-        />
-      </Container>
-      <Container maxWidth="xl" sx={{ my: 20, overflow: "hidden" }}>
-        <OfferSlider />
-      </Container>
+      <ReservationSection />
       <Paper
         elevation={1}
         sx={{
@@ -48,7 +37,7 @@ export default function OfferPage() {
         }}
       >
         <Container maxWidth="xl" sx={{ my: 10 }}>
-          <Heading title="Our Houses" />
+          <Heading title="Other Houses" />
           <Grid container spacing={3}>
             <Grid item xs={12} md={10} lg={7}>
               <SlideIn variant="left">
@@ -78,6 +67,7 @@ export default function OfferPage() {
       <Container maxWidth="xl" sx={{ my: 20, overflow: "hidden" }}>
         <Gallery />
       </Container>
+      <OffersNav />
       <ContactSection />
     </Box>
   );

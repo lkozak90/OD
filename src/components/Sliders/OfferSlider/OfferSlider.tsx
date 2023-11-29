@@ -42,14 +42,15 @@ const OfferSlider = () => {
   return (
     <Box
       sx={{
-        height: "calc(100vh - 64px)",
+        height: "80vh",
+        maxHeight: 800,
         width: "100%",
         position: "relative",
       }}
     >
       <Box
         sx={{
-          height: { xs: "60%", md: "100%" },
+          height: { xs: "50%", md: "100%" },
           width: "100%",
           pr: { md: 8 },
         }}
@@ -89,8 +90,9 @@ const OfferSlider = () => {
         sx={{
           position: "absolute",
           bottom: 0,
-          height: "30%",
-          minHeight: 300,
+          top: { xs: "50%", md: "auto" },
+          height: { md: "30%" },
+          minHeight: { md: 250 },
           width: { xs: "100%", md: "50%", lg: "40%" },
           right: 0,
           zIndex: 1,

@@ -19,7 +19,7 @@ const SliderNavigation = ({
       sx={{
         width: { xs: "100%", md: "calc(50% + 30px)", lg: "calc(60% + 40px)" },
         position: "absolute",
-        bottom: 0,
+        bottom: { xs: 12, md: 0 },
         zIndex: 1,
       }}
       direction="row"
@@ -29,15 +29,18 @@ const SliderNavigation = ({
       <Box>
         <IconButton onClick={() => swiper.slidePrev()}>
           <ArrowBackIosNew
-            fontSize="large"
-            sx={{ left: -2, position: "relative" }}
+            sx={{
+              left: -2,
+              position: "relative",
+              fontSize: { md: "2.1875rem" },
+            }}
           />
         </IconButton>
       </Box>
       <Box
         sx={{
-          width: 48,
-          height: 48,
+          width: { xs: 40, md: 48 },
+          height: { xs: 40, md: 48 },
           borderRadius: "50%",
           display: "flex",
           alignItems: "center",
@@ -57,8 +60,11 @@ const SliderNavigation = ({
           sx={{ flexShrink: 0, right: "0.5vw" }}
         >
           <ArrowForwardIos
-            fontSize="large"
-            sx={{ right: -2, position: "relative" }}
+            sx={{
+              right: -2,
+              position: "relative",
+              fontSize: { md: "2.1875rem" },
+            }}
           />
         </IconButton>
       </Box>
