@@ -6,6 +6,7 @@ declare module "@mui/material/styles" {
     xs: true;
     sm2: true;
     sm: true;
+    md2: true;
     md: true;
     lg: true;
     xl: true;
@@ -39,6 +40,7 @@ let theme = createTheme({
       xs: 0,
       sm2: 460,
       sm: 600,
+      md2: 769,
       md: 900,
       lg: 1200,
       xl: 1536,
