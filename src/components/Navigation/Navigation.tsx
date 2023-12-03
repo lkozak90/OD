@@ -73,10 +73,18 @@ const Navigation = () => {
   }, []);
 
   const drawer = (
-    <Box sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        LOGO
-      </Typography>
+    <Box sx={{ textAlign: "center" }} onClick={handleDrawerToggle}>
+      <MuiLink
+        href="/"
+        component={Link}
+        underline="none"
+        color="white"
+        sx={{ my: 2, display: "inline-block" }}
+      >
+        <Typography variant="h6" component="span">
+          LOGO
+        </Typography>
+      </MuiLink>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -119,7 +127,7 @@ const Navigation = () => {
             sx={{ width: "100%" }}
           >
             <MuiLink href="/" component={Link} underline="none" color="white">
-              <Typography variant="h6" component="h1" noWrap>
+              <Typography variant="h6" component="span" noWrap>
                 LOGO
               </Typography>
             </MuiLink>

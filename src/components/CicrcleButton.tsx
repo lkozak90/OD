@@ -2,12 +2,14 @@
 import { Box, Button, ButtonProps } from "@mui/material";
 import { TouchRippleActions } from "@mui/material/ButtonBase/TouchRipple";
 import React, { useRef } from "react";
+import Link from "next/link";
 
 export interface CircleButtonProps {
   text: React.ReactNode;
   variant?: ButtonProps["variant"];
   color?: ButtonProps["color"];
   sx?: ButtonProps["sx"];
+  href?: string;
 }
 
 const CircleButton = ({
@@ -15,11 +17,14 @@ const CircleButton = ({
   variant = "outlined",
   color,
   sx,
+  href,
 }: CircleButtonProps) => {
   const touchRippleRef = useRef<TouchRippleActions>(null);
 
   return (
     <Button
+      LinkComponent={Link}
+      href={href}
       variant={variant}
       color={color}
       size="large"

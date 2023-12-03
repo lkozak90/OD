@@ -115,6 +115,7 @@ export default function HomePage() {
             title="Our Houses"
             button={{
               text: "Check Houses",
+              href: "/offer",
             }}
           />
           <Grid container spacing={3}>
@@ -134,15 +135,6 @@ export default function HomePage() {
         </Container>
         <Container maxWidth={false} sx={{ mb: 15, maxWidth: 2560 }}>
           <Grid container spacing={3} justifyContent="center">
-            <Grid item>
-              <OfferCard />
-            </Grid>
-            <Grid item>
-              <OfferCard />
-            </Grid>
-            <Grid item>
-              <OfferCard />
-            </Grid>
             <Grid item>
               <OfferCard />
             </Grid>

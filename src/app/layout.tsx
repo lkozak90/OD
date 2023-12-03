@@ -1,7 +1,7 @@
 import * as React from "react";
 import ThemeRegistry from "@/theme/ThemeRegistry";
 import { Box } from "@mui/material";
-import { Navigation, Footer } from "@/components";
+import { Navigation, Footer, Cookies } from "@/components";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
@@ -19,6 +19,7 @@ export default function RootLayout({
           <Navigation />
           <Box component="main">{children}</Box>
           <Footer />
+          <Cookies />
         </ThemeRegistry>
       </body>
     </html>

@@ -18,3 +18,6 @@ export * from "./ReservationSection";
 export * from "./OffersNav";
 export * from "./Tabs";
 export * from "./Accordions";
+export * from "./SimpleBanner";
+export * from "./TextImageColumns";
+export * from "./Cookies";

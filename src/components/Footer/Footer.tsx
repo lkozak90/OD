@@ -85,7 +85,7 @@ const Footer = () => {
                 <Typography variant="body2">
                   <MuiLink
                     component={Link}
-                    href="/"
+                    href="/privacy-policy"
                     color="inherit"
                     underline="hover"
                   >

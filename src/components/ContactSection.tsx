@@ -1,3 +1,4 @@
+"use client";
 import {
   Container,
   Grid,
@@ -9,16 +10,23 @@ import Link from "next/link";
 import { Email, Phone, WhatsApp } from "@mui/icons-material";
 import { Heading } from "./Heading";
 import { SlideIn } from "./SlideIn";
+import { usePathname } from "next/navigation";
 
 const ContactSection = () => {
+  const pathname = usePathname();
   return (
     <Container maxWidth="xl" sx={{ my: 20, overflow: "hidden" }}>
       <Heading
         title="Let's Connect"
         titleProps={{ variant: "h1", component: "h2" }}
-        button={{
-          text: "Contact Us",
-        }}
+        button={
+          pathname === "/contact"
+            ? undefined
+            : {
+                text: "Contact Us",
+                href: "/contact",
+              }
+        }
       />
       <Grid container spacing={3} justifyContent="space-between">
         <Grid item xs={12} md={10} lg={5}>
