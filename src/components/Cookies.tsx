@@ -59,7 +59,7 @@ const Cookies = () => {
         sx={(theme) => ({
           top: "auto",
           bottom: 0,
-          zIndex: theme.zIndex.appBar + 1,
+          zIndex: theme.zIndex.appBar + 2,
         })}
       >
         <Toolbar disableGutters sx={{ py: 2 }}>

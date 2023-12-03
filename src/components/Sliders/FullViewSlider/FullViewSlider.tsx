@@ -40,13 +40,13 @@ export const FullViewSlider = () => {
       </Swiper>
 
       <Box
-        sx={{
+        sx={(theme) => ({
           position: "relative",
-          zIndex: 1500,
+          zIndex: theme.zIndex.appBar + 1,
           display: "flex",
           justifyContent: "center",
           mt: { xs: -9, md2: -22 },
-        }}
+        })}
       >
         <Reservation />
       </Box>
