@@ -9,6 +9,7 @@ import {
   ContactSection,
   Heading,
   SlideIn,
+  Reservation,
 } from "@/components";
 import { Container, Box, Grid, Button, Paper, Typography } from "@mui/material";
 import {
@@ -27,6 +28,7 @@ export default function HomePage() {
   return (
     <Box>
       <FullViewSlider />
+      <Reservation />
       <Container maxWidth="xl" sx={{ my: 20, overflow: "hidden" }}>
         <Intro
           variant="h1"

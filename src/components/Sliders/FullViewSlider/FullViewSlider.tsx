@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Box } from "@mui/material";
 import { Slide } from "./components";
 import { SliderNavigation } from "../components";
-import { CircleButton } from "../../CicrcleButton";
+import { Reservation } from "../../Reservation";
 
 export const FullViewSlider = () => {
   return (
@@ -38,16 +38,17 @@ export const FullViewSlider = () => {
         </SwiperSlide>
         <SliderNavigation />
       </Swiper>
+
       <Box
         sx={{
-          position: "absolute",
-          zIndex: 1,
-          bottom: 32,
-          left: "50%",
-          transform: "translateX(-50%)",
+          position: "relative",
+          zIndex: 1500,
+          display: "flex",
+          justifyContent: "center",
+          mt: { xs: -9, md2: -22 },
         }}
       >
-        <CircleButton text="Check Availability" />
+        <Reservation />
       </Box>
     </Box>
   );
