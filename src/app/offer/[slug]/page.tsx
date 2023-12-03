@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: "Osada Domków w Kościelisku - Oferta domku 1",
 };
 
-export default function OfferPage() {
+export default function SingleOfferPage() {
   return (
     <Box>
       <OfferBanner
@@ -37,7 +37,13 @@ export default function OfferPage() {
         }}
       >
         <Container maxWidth="xl" sx={{ my: 10 }}>
-          <Heading title="Other Houses" />
+          <Heading
+            title="Other Houses"
+            button={{
+              text: "Check offer",
+              href: "/offer",
+            }}
+          />
           <Grid container spacing={3}>
             <Grid item xs={12} md={10} lg={7}>
               <SlideIn variant="left">

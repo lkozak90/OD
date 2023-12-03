@@ -1,14 +1,5 @@
 "use client";
-import {
-  Box,
-  Button,
-  Container,
-  Paper,
-  Stack,
-  styled,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Stack, styled, Typography } from "@mui/material";
 import { ArrowForwardIos, ArrowBackIosNew } from "@mui/icons-material";
 import Link from "next/link";
 
