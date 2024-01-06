@@ -22,3 +22,4 @@ export * from "./SimpleBanner";
 export * from "./TextImageColumns";
 export * from "./Cookies";
 export * from "./Reservation";
+export * from "./BookNow";

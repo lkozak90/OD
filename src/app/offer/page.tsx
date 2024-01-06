@@ -67,10 +67,10 @@ export default function OfferPage() {
         <Container maxWidth={false} sx={{ mb: 15, maxWidth: 2560 }}>
           <Grid container spacing={3} justifyContent="center">
             <Grid item>
-              <OfferCard />
+              <OfferCard id="offers-house-1" />
             </Grid>
             <Grid item>
-              <OfferCard />
+              <OfferCard id="offers-house-2" />
             </Grid>
           </Grid>
         </Container>

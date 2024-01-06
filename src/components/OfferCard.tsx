@@ -14,6 +14,7 @@ import { AttachMoney, SquareFoot, Shower } from "@mui/icons-material";
 import { useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { BookNow } from "./BookNow";
 
 const StyledCardActionArea = styled(CardActionArea)(({ theme }) => ({
   height: "100%",
@@ -43,7 +44,11 @@ const features = [
   },
 ];
 
-const OfferCard = () => {
+interface OfferCardProps {
+  id: string;
+}
+
+const OfferCard = ({ id }: OfferCardProps) => {
   const router = useRouter();
   const handleButtonClick = useCallback((e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation();
@@ -108,15 +113,7 @@ const OfferCard = () => {
               </Button>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Button
-                variant="contained"
-                size="large"
-                fullWidth
-                onMouseDown={handleButtonClick}
-                onClick={handleButtonClick}
-              >
-                Zarezerwuj
-              </Button>
+              <BookNow id={id} />
             </Grid>
           </Grid>
         </Box>
