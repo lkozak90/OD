@@ -1,30 +1,17 @@
 "use client";
-import {
-  Card,
-  CardContent,
-  Container,
-  Grid,
-  Typography,
-  Button,
-  Divider,
-  Box,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Stack,
-} from "@mui/material";
-import { LocalTaxi, Man, MusicNote, OtherHouses } from "@mui/icons-material";
-import React from "react";
-import { SliderWithThumbs } from "./Sliders";
-import { SlideIn } from "./SlideIn";
-import { Bar } from "./Bar";
-import { Heading } from "./Heading";
-import { Tabs } from "./Tabs";
-import { Accordions } from "./Accordions";
+import { Container, Grid, Typography, Box, Stack } from "@mui/material";
 import { Alarm } from "@mui/icons-material";
+import React from "react";
+import { SliderWithThumbs } from "@/components/Sliders";
+import { SlideIn } from "@/components/SlideIn";
+import { Bar } from "@/components/Bar";
+import { Heading } from "@/components/Heading";
+import { Tabs } from "@/components/Tabs";
+import { Accordions } from "@/components/Accordions";
 import Image from "next/image";
+import { BookNowCard } from "./components";
 
-const itemFeatures = [
+const features = [
   {
     icon: <Alarm color="primary" />,
     text: "Feature 1 label",
@@ -55,13 +42,13 @@ const itemFeatures = [
   },
 ];
 
-const items = [
+const tabs = [
   {
     id: "1",
     title: "Features",
     content: (
       <Grid container spacing={3}>
-        {itemFeatures.map(({ icon, text }) => (
+        {features.map(({ icon, text }) => (
           <Grid key={text} item xs={12} sm2={6} sm={4} md={6} lg={4}>
             <Stack spacing={1} alignItems="center" direction="row">
               {icon}
@@ -101,25 +88,6 @@ const items = [
         Line Lane.
       </Typography>
     ),
-  },
-];
-
-const features = [
-  {
-    icon: <LocalTaxi color="primary" />,
-    title: "Sleeps 10",
-  },
-  {
-    icon: <Man color="primary" />,
-    title: "Bedrooms 6",
-  },
-  {
-    icon: <MusicNote color="primary" />,
-    title: "Bathrooms 2",
-  },
-  {
-    icon: <OtherHouses color="primary" />,
-    title: "Size 100 m²",
   },
 ];
 
@@ -178,76 +146,16 @@ const ReservationSection = () => {
             </Grid>
             <Grid item xs={12} sx={{ my: 10 }}>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
-                <Tabs items={items} />
+                <Tabs items={tabs} />
               </Box>
               <Box sx={{ display: { xs: "block", sm: "none" } }}>
-                <Accordions items={items} />
+                <Accordions items={tabs} />
               </Box>
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={12} md={4}>
-          <Card
-            sx={{
-              width: "100%",
-              p: { sm: 1 },
-              maxWidth: { md: 400 },
-              top: { md: 110 },
-              marginTop: { xs: "-100px", md: "-200px" },
-              position: { xs: "relative", md: "sticky" },
-            }}
-            variant="outlined"
-          >
-            <CardContent sx={{ "&:last-child": { pb: 2 } }}>
-              <Grid container spacing={3}>
-                <Grid item xs={12}>
-                  <Typography variant="h4">Dom 1</Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="body1">
-                    She had a last view back on the skyline of her hometown
-                    Bookmarksgrove, the headline of Alphabet Village and the
-                    subline of her own road, the Line Lane
-                  </Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <Grid container spacing={1}>
-                    {features.map(({ icon, title }) => (
-                      <Grid
-                        key={title}
-                        item
-                        xs={6}
-                        sm2={3}
-                        md={6}
-                        lg={3}
-                        sx={{ textAlign: "center" }}
-                      >
-                        {icon}
-                        <Typography variant="body2">{title}</Typography>
-                      </Grid>
-                    ))}
-                  </Grid>
-                </Grid>
-                <Grid item xs={12}>
-                  <Divider />
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="subtitle1">
-                    From{" "}
-                    <Typography component="span" color="primary" variant="h6">
-                      1500zł{" "}
-                    </Typography>
-                    / night
-                  </Typography>
-                </Grid>
-                <Grid item xs={12}>
-                  <Button fullWidth variant="contained" size="large">
-                    Book Now
-                  </Button>
-                </Grid>
-              </Grid>
-            </CardContent>
-          </Card>
+          <BookNowCard />
         </Grid>
       </Grid>
     </Container>
